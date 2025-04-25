@@ -363,7 +363,7 @@ html, body {
 }
 
 /* Botão fixado abaixo do título central */
-.whatsapp-fixado-centro {
+/* atualizado */ .whatsapp-fixado-centro {
   position: absolute;
   top: 180px;
   left: 50%;
