@@ -8,11 +8,45 @@
   <title>Cell City | Troca de Tela de Celular em Goiânia</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <style>
+    .botao-whatsapp-destaque {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background-color: #25D366;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+      margin: 10px 0;
+      transition: background 0.3s;
+    }
+    .botao-whatsapp-destaque:hover {
+      background-color: #1ebe5c;
+    }
+    .whatsapp-pequeno {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      background-color: transparent;
+      border: none;
+    }
+    .whatsapp-pequeno img {
+      width: 28px;
+      height: 28px;
+    }
+  </style>
 </head>
 <body>
 
   <div class="barra-topo">
-    <p>Atendimento rápido com garantia real e peças com procedência. <strong>Cell City é confiança de verdade!</strong></p>
+    <p>Atendimento rápido com garantia real e peças com procedência. <strong>Cell City é confiança de verdade!</strong>
+      <a class="whatsapp-pequeno" href="https://wa.me/5562981605863" target="_blank" aria-label="WhatsApp Cell City">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" />
+      </a>
+    </p>
   </div>
 
   <div class="wrapper">
@@ -27,7 +61,7 @@
               <li><a href="acessorios.html">Acessórios</a></li>
               <li><a href="tela.html">Troca de Tela</a></li>
               <li><a href="conserto.html">Consertos de Celular</a></li>
-              <li><a href="formatacao.html">Formação de Celular</a></li>
+              <li><a href="formatacao.html">Formatação de Celular</a></li>
               <li><a href="manutencao.html">Manutenção de Computador</a></li>
             </ul>
           </li>
@@ -40,13 +74,13 @@
         <h1>Bem-vindo à Cell City</h1>
         <p>Troca de tela com rapidez, garantia e procedência!</p>
         <a class="botao-whatsapp-destaque" href="https://wa.me/5562981605863" target="_blank" aria-label="WhatsApp Cell City">
-          <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" width="30" height="30" />
-          (62) 98160-5863
+          <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" width="20" height="20" />
+          Falar com a Cell City
         </a>
         <img src="tecnico-haroldo-troca-tela.webp" alt="Técnico Haroldo trocando tela" width="300" height="300" class="imagem-celular-mao" />
       </section>
 
-      <!-- Carrossel com imagens reais do GitHub -->
+      <!-- Carrossel -->
       <section class="carrossel-cellcity">
         <div class="swiper">
           <div class="swiper-wrapper">
@@ -75,6 +109,13 @@
 
       <div class="selo-garantia">
         <img src="selo-garantia.webp" alt="Selo de Garantia Real" width="76" height="76" />
+      </div>
+
+      <div style="text-align: center; margin: 20px;">
+        <a class="botao-whatsapp-destaque" href="https://wa.me/5562981605863" target="_blank" aria-label="WhatsApp Cell City">
+          <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" width="20" height="20" />
+          Falar com a Cell City
+        </a>
       </div>
 
       <section class="descricao">
@@ -125,21 +166,25 @@
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
   <script defer>
     document.addEventListener("DOMContentLoaded", function () {
+      console.log("Página carregada - Iniciando componentes");
       const swiper = new Swiper('.swiper', {
         loop: true,
         pagination: { el: '.swiper-pagination' },
         navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
         autoplay: { delay: 3000, disableOnInteraction: false },
       });
+      console.log("Swiper inicializado");
 
       document.querySelectorAll('.has-submenu .menu-toggle').forEach(toggle => {
         toggle.addEventListener('click', function () {
+          console.log("Menu toggle clicado");
           this.parentElement.classList.toggle('ativo');
         });
       });
 
       document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
+          console.log("FAQ clicado");
           const answer = button.nextElementSibling;
           document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
           if (answer.style.display !== 'block') answer.style.display = 'block';
@@ -148,6 +193,7 @@
 
       const submenuParent = document.querySelector('.has-submenu');
       submenuParent.addEventListener('mouseleave', () => {
+        console.log("Mouse saiu do submenu");
         submenuParent.classList.remove('ativo');
       });
     });
