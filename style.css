@@ -361,3 +361,36 @@ html, body {
 .whatsapp-topo-fixo:hover {
   background-color: #1ebe5d;
 }
+
+/* Botão fixado abaixo do título central */
+.whatsapp-fixado-centro {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.whatsapp-fixado-centro a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.whatsapp-fixado-centro img {
+  width: 20px;
+  height: 20px;
+}
