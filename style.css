@@ -276,3 +276,70 @@ html, body {
     padding: 14px 24px;
   }
 }
+
+
+/* Centralização da seção de descrição */
+.descricao {
+  background: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.descricao-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.descricao-content h2 {
+  font-size: 22px;
+  color: #004d00;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.descricao-content ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.descricao-content li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  position: relative;
+  padding-left: 22px;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+}
+
+.descricao-content li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Centralizar botão após selo */
+.botao-whatsapp-destaque {
+  background-color: #25D366;
+  padding: 14px 28px;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  text-decoration: none;
+  margin: 30px auto 60px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 320px;
+  transition: transform 0.2s ease;
+}
+
+.botao-whatsapp-destaque:hover {
+  transform: scale(1.05);
+}
