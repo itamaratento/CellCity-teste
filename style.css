@@ -343,3 +343,17 @@ html, body {
 .botao-whatsapp-destaque:hover {
   transform: scale(1.05);
 }
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+.whatsapp-float img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
