@@ -394,3 +394,33 @@ html, body {
   width: 20px;
   height: 20px;
 }
+
+/* Botão de WhatsApp incorporado na seção hero */
+.whatsapp-central-incorporado {
+  margin: 20px auto 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.whatsapp-central-incorporado a {
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.whatsapp-central-incorporado a:hover {
+  background-color: #1ebe5d;
+}
+
+.whatsapp-central-incorporado img {
+  width: 20px;
+  height: 20px;
+}
