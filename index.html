@@ -8,6 +8,7 @@
   <meta http-equiv="Cache-Control" content="public, max-age=604800" />
   <title>Cell City | Troca de Tela de Celular em Goiânia</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
   <div class="barra-topo">
@@ -61,5 +62,41 @@
       </div>
     </main>
   </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+  <script defer>
+    document.addEventListener("DOMContentLoaded", function () {
+      console.log("Página carregada - Iniciando componentes");
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        pagination: { el: '.swiper-pagination' },
+        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+        autoplay: { delay: 3000, disableOnInteraction: false },
+      });
+      console.log("Swiper inicializado");
+
+      document.querySelectorAll('.has-submenu .menu-toggle').forEach(toggle => {
+        toggle.addEventListener('click', function () {
+          console.log("Menu toggle clicado");
+          this.parentElement.classList.toggle('ativo');
+        });
+      });
+
+      document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+          console.log("FAQ clicado");
+          const answer = button.nextElementSibling;
+          document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+          if (answer.style.display !== 'block') answer.style.display = 'block';
+        });
+      });
+
+      const submenuParent = document.querySelector('.has-submenu');
+      submenuParent.addEventListener('mouseleave', () => {
+        console.log("Mouse saiu do submenu");
+        submenuParent.classList.remove('ativo');
+      });
+    });
+  </script>
 </body>
 </html>
